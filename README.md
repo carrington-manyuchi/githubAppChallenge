@@ -1,4 +1,4 @@
-# GithubAppChallenge - Take home iOS project  - Upper Junior 
+# Take home iOS project  - Upper Junior 
 
 # Overview
 This project encourages intentional open-mindedness. We want to see how you create when it’s all up to you. The project will be assessed based on your code quality, UI/UX, and the overall quality and feel of the app.
