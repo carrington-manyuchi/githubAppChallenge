@@ -9,11 +9,11 @@ This project encourages intentional open-mindedness. We want to see how you crea
 3. The user can tap on a follower from the list to get more information about the follower.
 4. The user can save favorite username searches so they don’t have to type them every time. These searches need to persist between app launches.
 
-# Additional Requirements:
+# Additional Requirements
 1. 100% programmatic UI – No Storyboard.
 2. No third party libraries
 
-# Use github API – No authentication needed. 
+# Use github API – No authentication needed
 https://api.github.com/user/followers
 
 https://api.github.com/user/following
