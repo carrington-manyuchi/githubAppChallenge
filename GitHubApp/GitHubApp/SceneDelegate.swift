@@ -13,7 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
@@ -29,7 +28,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return UINavigationController(rootViewController: searchViewController)
         }
         
-        
         func createFavouritesNavigationController() -> UINavigationController {
             let favouritesViewController = FavouriteListViewController()
             favouritesViewController.title = "Favourites"
@@ -37,17 +35,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return UINavigationController(rootViewController: favouritesViewController)
         }
         
-        
         func createTabBar() -> UITabBarController {
             let tabBar = UITabBarController()
             UITabBar.appearance().tintColor = .systemGreen
             UITabBar.appearance().backgroundColor = .brown
             tabBar.viewControllers = [createSearchNavigationController(), createFavouritesNavigationController()]
-            
             return tabBar
-            
         }
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
