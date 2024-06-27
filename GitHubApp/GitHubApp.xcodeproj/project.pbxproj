@@ -16,6 +16,7 @@
 		E6A5F8832C2DD66000839201 /* GitHubAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5F8822C2DD66000839201 /* GitHubAppUITestsLaunchTests.swift */; };
 		E6A5F8902C2DE1EE00839201 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5F88F2C2DE1EE00839201 /* SearchViewController.swift */; };
 		E6A5F8922C2DE21900839201 /* FavouriteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5F8912C2DE21900839201 /* FavouriteListViewController.swift */; };
+		E6A5F8942C2DF7A800839201 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A5F8932C2DF7A800839201 /* GFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E6A5F8822C2DD66000839201 /* GitHubAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E6A5F88F2C2DE1EE00839201 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E6A5F8912C2DE21900839201 /* FavouriteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteListViewController.swift; sourceTree = "<group>"; };
+		E6A5F8932C2DF7A800839201 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E6A5F86D2C2DD65D00839201 /* Info.plist */,
 				E6A5F88F2C2DE1EE00839201 /* SearchViewController.swift */,
 				E6A5F8912C2DE21900839201 /* FavouriteListViewController.swift */,
+				E6A5F8932C2DF7A800839201 /* GFButton.swift */,
 			);
 			path = GitHubApp;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6A5F8922C2DE21900839201 /* FavouriteListViewController.swift in Sources */,
+				E6A5F8942C2DF7A800839201 /* GFButton.swift in Sources */,
 				E6A5F8902C2DE1EE00839201 /* SearchViewController.swift in Sources */,
 				E6A5F8602C2DD65B00839201 /* AppDelegate.swift in Sources */,
 				E6A5F8622C2DD65B00839201 /* SceneDelegate.swift in Sources */,
