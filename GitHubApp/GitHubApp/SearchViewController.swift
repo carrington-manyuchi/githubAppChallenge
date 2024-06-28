@@ -36,11 +36,19 @@ class SearchViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    @objc func pushFollowerListViewController() {
+        let followerListViewController = FollowerListViewController()
+        followerListViewController.username = usernameTextField.text
+        followerListViewController.title = usernameTextField.text
+        navigationController?.pushViewController(followerListViewController, animated: true)
+    }
+    
     func configureViews() {
         view.addSubview(logoImageView)
         view.addSubview(usernameTextField)
         usernameTextField.delegate = self
         view.addSubview(callToActionButton)
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListViewController), for: .touchUpInside)
         configureConstraints()
     }
     
@@ -76,7 +84,7 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("Did tap return")
+        pushFollowerListViewController()
         return true
     }
 }
