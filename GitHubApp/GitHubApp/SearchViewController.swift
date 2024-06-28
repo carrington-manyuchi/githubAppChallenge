@@ -23,6 +23,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureViews()
+        createDismissKeyBoardTapGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,9 +31,15 @@ class SearchViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    func createDismissKeyBoardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
+    
     func configureViews() {
         view.addSubview(logoImageView)
         view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
         view.addSubview(callToActionButton)
         configureConstraints()
     }
@@ -65,4 +72,11 @@ class SearchViewController: UIViewController {
         NSLayoutConstraint.activate(callToActionButtonConstraints)
     }
 
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Did tap return")
+        return true
+    }
 }
