@@ -10,13 +10,7 @@ import UIKit
 class FollowerListViewController: UIViewController {
     
     var username: String!
-    var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.register(FollowerCollectionViewCell.self, forCellWithReuseIdentifier: FollowerCollectionViewCell.reuseID)
-        collectionView.backgroundColor = .systemPink
-        return collectionView
-    }()
+    var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +26,28 @@ class FollowerListViewController: UIViewController {
     func configureViews() {
         navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBackground
+        configureUICollectionView()
+    }
+    
+    func configureUICollectionView() {
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createThreeColumnFlowLayout())
+        collectionView.register(FollowerCollectionViewCell.self, forCellWithReuseIdentifier: FollowerCollectionViewCell.reuseID)
+        collectionView.backgroundColor = .systemPink
         view.addSubview(collectionView)
-        collectionView.frame = view.bounds
+
+    }
+    
+    private func createThreeColumnFlowLayout() -> UICollectionViewFlowLayout {
+        let width = view.bounds.width
+        let padding: CGFloat = 12
+        let minimumItemSpacing: CGFloat = 10
+        let availableWidth = width - (padding * 2) - (minimumItemSpacing * 2)
+        let itemWidth = availableWidth / 3
+        let flowlayout = UICollectionViewFlowLayout()
+        flowlayout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
+        flowlayout.itemSize = CGSize(width: itemWidth, height: (itemWidth + 40))
+
+        return flowlayout
     }
     
     private func getFollowers() {
